@@ -1,0 +1,131 @@
+#bemVindo{
+  padding: 15px;
+  padding-top: 0px;
+}
+#bemVindo h1{
+  text-align: center;
+}
+
+
+/*PARTE 1*/
+#part1{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 7px;
+  place-items: center;
+  text-align: center;
+}
+/*media*/
+#media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0; /* Optional: adds some space above and below */
+}
+
+#divMedia {
+  border: 4px solid black;
+  min-width: 100px;
+  text-align: center;
+}
+
+
+/*mais*/
+#mais{
+  display: None;
+  text-align: center;
+}
+/*PARTE 2*/
+#part2{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 7px;
+  place-items: center;
+  text-align: center;
+}
+#part2-salvar{
+  display: none;
+  place-items: center;
+}
+
+#subpart2{
+  display: grid;
+  grid-template-rows:  1fr 1fr 1fr;
+  place-items: center;
+  text-align: center;
+  grid-template-columns: auto auto auto; 
+  border: 4px solid black;
+  margin: 15px;
+  padding: 4px;
+  padding-top: 0px;
+}
+
+#subpart2-Titulo{
+  grid-row: 1;
+  grid-column: 1 / 3;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+#subpart2-Ano{
+  grid-row: 2;
+  grid-column: 1;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+#subpart2-Semestre{
+  grid-row: 2;
+  grid-column: 2;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+#subpart2-Nota{
+  grid-row: 3;
+  grid-column: 1;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+#subpart2-ECTS{
+  grid-row: 3;
+  grid-column: 2;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/*finalGrade*/
+#finalGrade{
+  text-align: center;
+}
+
+/*form*/
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input, form select {
+  margin-bottom: 10px;
+  width: 80%;
+  max-width: 300px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="../styles/Imports/calcIndivImport.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+    </nav>
+    <div id="sair">
+        <img onclick = "unLogin()" src = "../images/exit.png">
+    </div>
+</header>
+    <div id="top"></div>
+    <div id="bemVindo">
+        <h1>Não sabes como calcular uma Nota Final?</h1>
+        <p>Estás no local certo, nós ajudamos!</p>
+        <p>Não te esqueças que o que fazes neste site fica guardado no teu browser! Ou seja:</p>
+        <ol>
+            <li>Será apenas visto por ti;</li>
+            <li>Apenas podes ver em 1 dispositivo, e no mesmo browser.</li>
+        </ol>
+    </div>
+    <div id="inicio">
+        <h1>Quantas partes de avaliação tens?</h1>
+        <form id="frmQntAvals">
+            <fieldset>
+                <input id="qntAval" type="text" name="qntAval" required maxlength="2">
+                <button type="button" onclick="generateFields()">Entregar</button>
+            </fieldset>
+        </form>
+    </div>
+    <div id="part1">
+    </div>
+    <div id="finalGrade"></div>
+    
+    <div id="down"></div>
+    <footer>
+        <div id="footerEsq">
+          <p><a href = "footer/aboutme.html">Sobre o projeto</a></p>
+          <p>&copy; 2024 Notas da escola.</p>
+        </div>
+        <div id="footerDir">
+          <p>Feito por <a href="https://www.linkedin.com/in/guilhermesoares26/">Guilherme Soares</a></p>      
+          <p>Lisboa, Portugal</p>      
+        </div>
+      </footer>
+      <script src="../scripts/calcIndiv.js"></script>
+      <script src="../scripts/logged.js"></script>
+</body>
+</html>

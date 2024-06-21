@@ -1,0 +1,106 @@
+/* GENERAL */
+body {
+  margin: 0;
+  background-color: #F786AA;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 100% 0%;
+  background-color: #A14A76;
+  text-align: center;
+  padding: 13px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Garante que o header fique por cima de tudo */
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-weight: bold;
+}
+
+header img {
+  width: 13px;
+}
+
+header img:hover {
+  cursor: pointer;
+}
+
+header nav {
+  grid-column: 1;
+}
+
+#sair {
+  display: none;
+  grid-column: 2;
+  right: 0px;
+}
+
+footer p, header a, footer a {
+  color: black; /*MUDAR AQUI A COR*/;
+  text-decoration: none;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  background-color: #A14A76;
+  padding: 10px 0;
+}
+
+#footerEsq {
+  grid-column: 1;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+#footerDir {
+  grid-column: 2;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+main {
+  flex-grow: 1;
+  margin-top: 70px; /* To avoid overlap with the fixed header */
+}
+
+#down {
+  flex-grow: 1;
+  min-height: calc(10vh - 15px);
+  padding-bottom: 15px;
+}
+
+#top {
+  margin-top: 50px;
+}
+
+/* BOTÃO DE SAIR */
+#sair {
+  background-image: url("/images/exit.png");
+}
