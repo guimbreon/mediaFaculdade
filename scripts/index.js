@@ -1,16 +1,5 @@
-let users = localStorage.getItem("loggedUser")
+function redirectToPage(pageURL, selectedOption) {// "type" is to choose how to play
+    // Redirect to the next page with the selected JavaScript option
+    window.location.href = pageURL + '?type=' + selectedOption
+  }
 
-function checkLogin(){
-    let logged = localStorage.getItem("logged")
-    if(users == null){
-        document.getElementById("indivCalc").href = "logReg/logReg.html";
-    }else if(users != null && logged){
-        console.log("a")
-    }
-}
-
-function principal(){
-    checkLogin();
-}
-
-principal();

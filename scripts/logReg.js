@@ -71,7 +71,12 @@ function fazerLogin() {
     if (entrou) {
         localStorage.setItem('logged?', ["True", username])
         window.alert("Sessão iniciada!");
-        window.location.href = "../pag/calcIndiv.html"
+        if(urlParams.includes("notaGeral")){
+            window.location.href = "../pag/calcTodo.html"
+
+        }else if(urlParams.includes("notaCadeira")){
+            window.location.href = "../pag/calcIndiv.html"
+        }
     } else {
         window.alert("Nome de utilizador e Senha não correspondem!")
     }

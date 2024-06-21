@@ -8,7 +8,6 @@ function verificarLogin(){
     }
     console.log("A")
     if(localStorage.getItem("logged?")[0] == "T"){
-        console.log("A")
         buttonSair.style = "display: inline;"
         header[0].style = "grid-template-columns: 90% 10%;"
 
