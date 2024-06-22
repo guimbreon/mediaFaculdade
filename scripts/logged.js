@@ -3,9 +3,8 @@ let header = document.getElementsByTagName("header")
 function verificarLogin(){
     urlParams = window.location.href;
     if(localStorage.getItem("logged?")[0] == "T" && urlParams.includes("index.html")){  
-        console.log("asddddddddddddddaasddddddddddddddaasddddddddddddddaasddddddddddddddaasddddddddddddddaasddddddddddddddaasddddddddddddddaasddddddddddddddaasddddddddddddddaasddddddddddddddaasddddddddddddddaasdddddddddddddda")   
-        document.getElementById("indivCalc").onclick = function() {redirectToPage('pag/calcTodo.html','Logged')}
-        document.getElementById("calcTodo").onclick= function() {redirectToPage('pag/calcIndiv.html','Logged')}
+        document.getElementById("indivCalc").onclick = function() {redirectToPage('pag/calcIndiv.html','Logged')}
+        document.getElementById("calcTodo").onclick= function() {redirectToPage('pag/calcTodo.html','Logged')}
     }
     if(localStorage.getItem("logged?")[0] == "T"){
         buttonSair.style = "display: inline;"
