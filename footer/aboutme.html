@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="../styles/Imports/aboutmeImport.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="../index.html"><img src="../images/home.png" alt="Home"></a></li>
+            </ul>
+        </nav>
+        <div id="sair">
+            <img onclick="unLogin()" src="../images/exit.png" alt="Sair">
+        </div>
+    </header>
+    <div id="top"></div>
+
+    <div id = "content">
+        <div id = "inicio">
+            <h1>Média da Faculdade</h1>
+            <p>Enquanto frequentei a faculdade, diversos colegas e amigos questionaram-me como se faziam as médias das cadeiras e a média geral do curso. Costumo ensiná-los como se faz, mas ao longo do tempo, com bastantes cadeiras feitas, começa a ficar difícil ter em conta tudo.</p>
+            <p>Então decidi criar este projeto para ajudar QUALQUER pessoa que esteja na faculdade a calcular a sua média muito facilmente!</p>
+        </div>
+        
+        <div>
+            <h2>Descrição do Projeto</h2>
+            <p>O site permite calcular a média de avaliações individuais ou a média do curso.</p>
+        </div>
+
+        <div>
+            <h2>Funcionalidades do Site</h2>
+            <h3>Registo e Login</h3>
+            <ul>
+                <li><strong>Página de Registo e Login:</strong> Permite aos utilizadores criar uma conta e iniciar sessão.
+                    <ul>
+                        <li><strong>Registo:</strong> Os utilizadores podem criar uma conta fornecendo um nome de utilizador e senha.</li>
+                        <li><strong>Login:</strong> Os utilizadores podem iniciar sessão utilizando o nome de utilizador e senha.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Calculadora de Notas Individual</h3>
+            <ul>
+                <li><strong>Input de Avaliações:</strong> Os utilizadores podem inserir a quantidade de partes de avaliação.</li>
+                <li><strong>Campos Dinâmicos:</strong> Geração dinâmica de campos para inserção de valores e percentagens das avaliações.</li>
+                <li><strong>Cálculo da Nota Final:</strong> Cálculo da nota final com base nos valores e percentagens inseridos.</li>
+            </ul>
+            <h3>Calculadora de Média Geral</h3>
+            <ul>
+                <li><strong>Importação de Ficheiros:</strong> Permite a importação de ficheiros Excel contendo dados das cadeiras e respetivas notas.</li>
+                <li><strong>Input Manual:</strong> Permite a inserção manual de cadeiras, ano, semestre, ECTS e nota.</li>
+                <li><strong>Cálculo da Média:</strong> Cálculo da média ponderada das cadeiras com base nos ECTS.</li>
+                <li><strong>Exportação de Resultados:</strong> Possibilidade de exportar os resultados para um ficheiro Excel.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Estrutura dos Ficheiros</h2>
+            <h3>HTML</h3>
+            <ul>
+                <li><strong>index.html:</strong> Página inicial do site.</li>
+                <li><strong>logReg.html:</strong> Página de registo e login.</li>
+                <li><strong>calcIndiv.html:</strong> Página para calcular notas individuais.</li>
+                <li><strong>calcTodo.html:</strong> Página para calcular a média geral.</li>
+            </ul>
+            <h3>JavaScript</h3>
+            <ul>
+                <li><strong>index.js:</strong> Funções para verificar o login na página inicial.</li>
+                <li><strong>logReg.js:</strong> Funções para o registo e login de utilizadores.</li>
+                <li><strong>logged.js:</strong> Funções para verificar e gerir o estado de login dos utilizadores.</li>
+                <li><strong>calcIndiv.js:</strong> Funções para calcular notas individuais.</li>
+                <li><strong>calcTodo.js:</strong> Funções para calcular a média geral de várias cadeiras.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Instruções para Utilização</h2>
+            <ol>
+                <li><strong>Acessar o Site:</strong> Abra o ficheiro <code>index.html</code> no seu navegador ou acesse <a href="https://www.guimbreon.online/mediaFaculdade">AQUI</a>.</li>
+                <li><strong>Registar-se ou Iniciar Sessão:</strong> Na primeira utilização, é necessário criar uma conta na página de registo e login (<code>logReg.html</code>).</li>
+                <li><strong>Calcular Notas Individuais:</strong> Após iniciar sessão, acesse a página de cálculo de notas individuais (<code>calcIndiv.html</code>) e siga as instruções para inserir os valores das avaliações.</li>
+                <li><strong>Calcular Média Geral:</strong> Acesse a página de cálculo de média geral (<code>calcTodo.html</code>) e escolha entre importar um ficheiro Excel com os dados das cadeiras ou inserir manualmente os detalhes de cada disciplina.</li>
+                <li><strong>Guardar Resultados:</strong> Utilize a opção de exportação para guardar os resultados em formato Excel.</li>
+            </ol>
+        </div>
+
+        <div>
+            <h2>Autor</h2>
+            <p>Este projeto foi desenvolvido por <a href="https://www.linkedin.com/in/guilhermesoares26/">Guilherme Soares</a>. Para mais informações sobre o projeto, visite a página "Sobre o Projeto" disponível no rodapé de todas as páginas.</p>
+        </div>
+
+        <div>
+            <h2>Notas Finais</h2>
+            <ul>
+                <li><strong>Privacidade dos Dados:</strong> Todas as informações inseridas pelos utilizadores são armazenadas localmente no navegador, garantindo a privacidade dos dados.</li>
+                <li><strong>Compatibilidade:</strong> O site é compatível com os principais navegadores e deve ser utilizado no mesmo dispositivo e navegador para manter os dados consistentes.</li>
+            </ul>
+            <p>Para qualquer dúvida ou sugestão, não hesite em contactar o autor através do LinkedIn.</p>
+        </div>
+    </div>
+    <div id="down"></div>
+
+    <footer>
+        <div id="footerEsq">
+            <p><a href="../footer/aboutme.html">Sobre o projeto</a></p>
+            <p>&copy; 2024 Notas da escola.</p>
+        </div>
+        <div id="footerDir">
+            <p>Feito por <a href="https://www.linkedin.com/in/guilhermesoares26/">Guilherme Soares</a></p>
+            <p>Lisboa, Portugal</p>
+        </div>
+    </footer>
+</body>
+</html>

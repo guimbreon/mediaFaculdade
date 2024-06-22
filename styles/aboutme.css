@@ -1,0 +1,13 @@
+#content{
+  padding: 13px;
+}
+
+a{
+  color: black;
+}
+a:hover{
+  color: blue;
+}
+#inicio{
+  text-align: center;
+}
