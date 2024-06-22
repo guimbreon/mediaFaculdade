@@ -25,7 +25,7 @@ function unLogin(){
 
     }else{
         window.alert("Vai ser redirecionado para a página principal!")
-        window.location.href = "guimbreon.online/mediaFaculdade"
+        window.location.href = "../index.html"
     }
     
 }
