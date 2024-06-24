@@ -3,12 +3,12 @@
   margin: 13px;
 }
 .login{
-  background-color: #F786AA;
+  background-color: #f4ae45;
   padding: 13px;
 }
 .registo{
-  background-color: #FBC2B5;
-  border-bottom: 8px dashed #F786AA;
+  background-color: #925a29;
+  border-bottom: 8px dashed #f4ae45;
   padding: 13px;
 }
 .options{

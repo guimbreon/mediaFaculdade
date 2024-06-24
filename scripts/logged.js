@@ -4,13 +4,15 @@ let header = document.getElementsByTagName("header");
 
 let urlParams2 = window.location.href;
 if(!urlParams2.includes("calcTodo.html")){
+    console.log("a")
     let users = JSON.parse(localStorage.getItem('users')) || [];
     let loggedUser = localStorage.getItem("logged?").split(",");
     loggedUser = loggedUser[1]
-        
+    let loggedObject    
     for (let user of users) {
         if (loggedUser == user.username) {
-            let loggedObject = user
+            console.log("Ss")
+            loggedObject = user
         }
     }
 
@@ -28,10 +30,6 @@ function verificarLogin(){
         }
 
         header[0].style = "grid-template-columns: 90% 10%;"
-
-    }
-    if(urlParams2.includes("perfil.html")){
-        console.log(loggedObject.cadeiras)
 
     }
     
