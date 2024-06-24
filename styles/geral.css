@@ -12,6 +12,10 @@ body {
   flex-direction: column;
   flex-grow: 1;
 }
+#content{
+  padding-left: 17px ;
+  padding-right: 17px ;
+}
 
 header {
   display: grid;

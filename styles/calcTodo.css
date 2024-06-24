@@ -6,10 +6,6 @@
   text-align: center;
 }
 
-#inicio{
-  padding: 13px;
-}
-
 /*PARTE 1*/
 #part1{
   display: grid;
@@ -34,10 +30,27 @@
 }
 
 
-/*mais*/
-#mais{
-  display: None;
+/*mais && menos*/
+#mais, #menos{
+  display: inline;
   text-align: center;
+}
+
+
+#menos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+#operations{
+  display: None;
+  grid-template-columns: auto auto;
+  text-align: center;
+
 }
 /*PARTE 2*/
 #part2{
@@ -50,6 +63,10 @@
 #part2-salvar{
   display: none;
   place-items: center;
+}
+#subpart2-Titulo img{
+  width: 10px;
+  height: auto;
 }
 
 #subpart2{

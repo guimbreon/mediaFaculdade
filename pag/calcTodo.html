@@ -19,58 +19,51 @@
         <img onclick = "unLogin()" src = "../images/exit.png">
     </div>
   </header>
-    <div id="top"></div>
-    <div id="bemVindo">
-        <h1>Não sabes como calcular a tua média?</h1>
-        <p>Estás no local certo, nós ajudamos!</p>
-        <p>Não te esqueças que o que fazes neste site fica guardado no teu browser! Ou seja:</p>
-        <ol>
-            <li>Será apenas visto por ti;</li>
-            <li>Apenas podes ver em 1 dispositivo, e no mesmo browser.</li>
-        </ol>
-    </div>
-    <div id="inicio">
-        <h1>Alguma vez usaste este programa?</h1>
-        <form id="frmUsouProg">
-            <fieldset>
-              <select id="selUsouProg" name="usouProg">
-                <option value="" selected>Selcionar!</option>
-                <option value="nao">Não</option>
-                <option value="sim">Sim</option>
-              </select>
-            </fieldset>
-        </form>
-    </div>
-    <div id="part1"></div>
-    <div id="mais">
-      <h3>Qual a cadeira que desejas adicionar?</h3>
-      <form id="frmMaisAvals">
-          <fieldset>
-            <label for="maisNome">Nome: </label>  
-            <input id="maisNome" type="text" name="maisNome" required maxlength="40">
-              
-            <label for="maisAno">Ano: </label>  
-            <input id="maisAno" type="text" name="maisAno" required maxlength="1">
-              
-            <label for="maisSem">Semestre: </label>  
-            <input id="maisSem" type="text" name="maisSem" required maxlength="1">
-              
-            <label for="maisECTS">ECTS: </label>  
-            <input id="maisECTS" type="text" name="maisECTS" required maxlength="2">
-              
-            <label for="maisNota">Nota: </label>  
-            <input id="maisNota" type="text" name="maisNota" required maxlength="2">
+  <div id="top"></div>
+  <div id="content">
+      <div id="bemVindo">
+          <h1>Não sabes como calcular a tua média?</h1>
+          <p>Estás no local certo, nós ajudamos!</p>
+          <p>Não te esqueças que o que fazes neste site fica guardado no teu browser! Ou seja:</p>
+          <ol>
+              <li>Será apenas visto por ti;</li>
+              <li>Apenas podes ver em 1 dispositivo, e no mesmo browser.</li>
+          </ol>
+      </div>
+      <div id="part1"></div>
+      <div id="operations">
+        <div id="mais">
+          <h3>Qual a cadeira que desejas adicionar?</h3>
+          <form id="frmMaisAvals">
+              <fieldset>
+                <label for="maisNome">Nome: </label>  
+                <input id="maisNome" type="text" name="maisNome" required maxlength="40">
+                  
+                <label for="maisAno">Ano: </label>  
+                <input id="maisAno" type="text" name="maisAno" required maxlength="1">
+                  
+                <label for="maisSem">Semestre: </label>  
+                <input id="maisSem" type="text" name="maisSem" required maxlength="1">
+                  
+                <label for="maisECTS">ECTS: </label>  
+                <input id="maisECTS" type="text" name="maisECTS" required maxlength="2">
+                  
+                <label for="maisNota">Nota: </label>  
+                <input id="maisNota" type="text" name="maisNota" required maxlength="2">
 
-            <button type="button" onclick="readMaisAvals()">Entregar</button>
-          </fieldset>
-      </form>
+                <button type="button" onclick="readMaisAvals()">Entregar</button>
+              </fieldset>
+          </form>
+        </div>
+
     </div>
-    <div id="media"></div>
-    <div id="part2"></div>
-    <div id="part2-salvar">
-      <button onclick = "saveButton()">Salvar em Excel!</button>
+      <div id="media"></div>
+      <div id="part2"></div>
+      <div id="part2-salvar">
+        <button onclick = "saveButton()">Salvar em Excel!</button>
+      </div>
+      
     </div>
-    
     <div id="down"></div>
     <footer>
         <div id="footerEsq">

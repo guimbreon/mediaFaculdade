@@ -11,13 +11,17 @@ const REGISTO_USERNAME = "username";
 const REGISTO_SENHA = "senha";
 
 /* GUARDA OS USERS */
+
+let urlParams = window.location.href;
 let users = JSON.parse(localStorage.getItem('users')) || [];
+
 let formularioLogin;
 let formularioRegisto;
 
 function User(username, senha, email, faixaEtaria, genero) {
     this.username = username;
     this.senha = senha;
+    this.cadeiras = [[],[{Media:0}]];
 }
 
 function principal() {

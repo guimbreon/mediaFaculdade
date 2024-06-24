@@ -7,18 +7,6 @@
     <link rel="stylesheet" href="styles/Imports/indexImport.css">
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WCKB4V36M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7WCKB4V36M');
-</script>
-<a title="Google Analytics Alternative" href="https://clicky.com/101456854"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-<script async data-id="101456854" src="//static.getclicky.com/js"></script>
-
 <body>
     <header id = "header">
         <nav>
@@ -31,30 +19,32 @@
         </div>
     </header>
     <div id = "top"></div>
-    <div id="bemVindo">
-        <h1>Bem-vindx á calculadora de notas!</h1>
-        <p>Confuso/a sobre como fazer a média de uma cadeira ou a média geral do teu curso? Nós ajudamos!</p>
-        <p>Não te esqueças que oque fazes neste site fica guardado no teu browser! Ou seja:</p>
-        <ol>
-            <li>Será apenas visto por ti;</li>
-            <li>Apenas podes ver em 1 dispotivo, e no mesmo browser.</li>
-        </ol>
-    </div>
-    <div id="part1">
-        <div id="part1-inicio">
-            <h1>Oque deseja fazer aqui?</h1>
+    <div id = "content">
+        <div id="bemVindo">
+            <h1>Bem-vindx á calculadora de notas!</h1>
+            <p>Confuso/a sobre como fazer a média de uma cadeira ou a média geral do teu curso? Nós ajudamos!</p>
+            <p>Não te esqueças que oque fazes neste site fica guardado no teu browser! Ou seja:</p>
+            <ol>
+                <li>Será apenas visto por ti;</li>
+                <li>Apenas podes ver em 1 dispotivo, e no mesmo browser.</li>
+            </ol>
         </div>
-        <div id="part1-apenas">
-            <h2>Apenas uma cadeira?</h2>
-            <p>Se quiseres apenas calcular a média de uma cadeira, clica aqui em baixo:</p>
-            <img src = "images/arrow-right.png" onclick = "redirectToPage('logReg/logReg.html','notaCadeira')" id="indivCalc">
+        <div id="part1">
+            <div id="part1-inicio">
+                <h1>Oque deseja fazer aqui?</h1>
+            </div>
+            <div id="part1-apenas">
+                <h2>Apenas uma cadeira?</h2>
+                <p>Se quiseres apenas calcular a média de uma cadeira, clica aqui em baixo:</p>
+                <img src = "images/arrow-right.png" onclick = "redirectToPage('logReg/logReg.html','notaCadeira')" id="indivCalc">
+            </div>
+            <div id="part1-notaGeral">
+                <h2>Calcular nota total?</h2>
+                <p>Se quiseres apenas calcular a média geral da Universidade, clica aqui em baixo:</p>
+                <img src = "images/arrow-right.png" onclick = "redirectToPage('logReg/logReg.html','notaGeral')" id="calcTodo">
+            </div>
+        
         </div>
-        <div id="part1-notaGeral">
-            <h2>Calcular nota total?</h2>
-            <p>Se quiseres apenas calcular a média geral da Universidade, clica aqui em baixo:</p>
-            <img src = "images/arrow-right.png" onclick = "redirectToPage('logReg/logReg.html','notaGeral')" id="calcTodo">
-        </div>
-       
     </div>
     <div id="down"></div>
     

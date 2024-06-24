@@ -1,91 +1,16 @@
 let cadeiras = [];
-
-function selectIfUsed(selecionada) {
-    let where = document.getElementById("part1");
-    let wherePart2 = document.getElementById("part2");
-    let wheremedia = document.getElementById("media");
-    let divMais = document.getElementById("mais")
-    let salvar = document.getElementById("part2-salvar")
-
-    /* COMMON RESETS */
-        where.innerHTML = ""
-        wherePart2.innerHTML = "";
-        wheremedia.innerHTML = "";
-        salvar.style = "display: none;"
-
-    if (selecionada == "sim") {
-        /*SPECIFIC RESET */
-        divMais.style = "display: none;"
-        cadeiras = []
-        /*DIV FILE SEPARATOR */
-
-        let divFile = document.createElement("div");
-        divFile.id = "file";
-        let inputFile = document.createElement("input");
-        inputFile.type = "file";
-        inputFile.id = "inputFile";
-        let inputTitle = document.createElement("h2");
-        inputTitle.innerHTML = "Envie o ficheiro aqui:";
-
-        inputFile.addEventListener("change", function (event) {
-            let file = event.target.files[0];
-            if (file) {
-                readFile(file);
-                divMais.style = "display: inline;"
-            }
-        });
-
-        divFile.appendChild(inputTitle);
-        divFile.appendChild(inputFile);
-
-        where.append(divFile);
-        /*DIV FILE SEPARATOR */
-    }else if(selecionada == "nao") {
-        divMais.style = "display: inline;"
-        salvar.style = "display: grid;"
-        cadeiras = [[],[{Media:0}]]
-    }else{
-        divMais.style = ""
+let users = JSON.parse(localStorage.getItem('users')) || [];
+let loggedUser = localStorage.getItem("logged?").split(",");
+loggedUser = loggedUser[1]
+let loggedObject
+for (let user of users) {
+    if (loggedUser == user.username) {
+        loggedObject = user
+        console.log(loggedObject)
     }
 }
+function selectIfUsed(selecionada) {
 
-function readFile(file) {
-    let reader = new FileReader();
-    let salvar = document.getElementById("part2-salvar")
-    salvar.style = "display: grid;"
-
-    reader.onload = function (event) {
-        let data = new Uint8Array(event.target.result);
-        let workbook = XLSX.read(data, { type: 'array' });
-
-        // Get the first sheet name
-        let sheetName = workbook.SheetNames[0];
-
-        // Get the first sheet
-        let sheet = workbook.Sheets[sheetName];
-
-        // Convert sheet to JSON
-        let jsonData = XLSX.utils.sheet_to_json(sheet);
-
-        // Get the second sheet name
-        let sheetName2 = workbook.SheetNames[1];
-
-        // Get the second sheet
-        let sheet2 = workbook.Sheets[sheetName2];
-
-        // Convert sheet to JSON
-        let jsonData2 = XLSX.utils.sheet_to_json(sheet2);
-        
-        constCadeira(jsonData, jsonData2)
-        cadeiras.push(jsonData,jsonData2)
-
-    };
-
-    reader.onerror = function (event) {
-        console.error('Error reading the file:', event);
-    };
-
-    reader.readAsArrayBuffer(file);
 
 }
 
@@ -95,12 +20,9 @@ function constCadeira(jsonData, jsonData2){
     let qntDivs = document.querySelectorAll("#part2 div");
 
 
-    console.log(qntDivs)
-    if(qntDivs.length > 0){
         where.innerHTML = ""
         whereMedia.innerHTML = ""
 
-    }
     for(let element in jsonData){
 
 
@@ -108,11 +30,19 @@ function constCadeira(jsonData, jsonData2){
         let subDiv = document.createElement("div")
         subDiv.id = "subpart2"
 
-        /*TITULO */
+        /*TITULO e Botão remover*/
         let divTitulo = document.createElement("div")
         divTitulo.id = "subpart2-Titulo"
         let titulo = document.createElement("h2")
         titulo.innerHTML = jsonData[element].Nome
+
+        let xBotao = document.createElement("img")
+        xBotao.src = "../images/close.png"
+        xBotao.alt = jsonData[element].Nome
+        xBotao.onclick = function (){removerItem(xBotao.alt)}
+
+
+        divTitulo.appendChild(xBotao)
         divTitulo.appendChild(titulo)
         subDiv.appendChild(divTitulo)
 
@@ -171,7 +101,6 @@ function constCadeira(jsonData, jsonData2){
     titMedia.innerHTML = "Media"
     let dataMedia = document.createElement("p")
     dataMedia.innerHTML = jsonData2[0].Media
-    console.log(jsonData2[0])
     divMedia.appendChild(titMedia)
     divMedia.appendChild(dataMedia)
     divMedia.id = "divMedia"
@@ -208,9 +137,8 @@ function readMaisAvals(){
     let maisNota = maisForm.elements["maisNota"].value;
 
     let correctTypes;
-    console.log(maisSem)
-
-    if(isNaN(maisAno) == false && isNaN(maisNome) == true  && isNaN(maisSem) == false && isNaN(maisECTS) == false && isNaN(maisNota) == false){
+    console.log(isNaN(maisECTS), maisECTS)
+    if(isNaN(parseInt(maisAno)) == false && isNaN(parseInt(maisNome)) == true  && isNaN(parseInt(maisSem)) == false && isNaN(parseInt(maisECTS)) == false && isNaN(parseInt(maisNota)) == false){
         correctTypes = true;
     }else{
         correctTypes = false;
@@ -225,14 +153,45 @@ function readMaisAvals(){
         }
         cadeiras[0].push(cadeiraNova);
     
-    
-    
         cadeiras[1][0].Media = getMedia(cadeiras[0])
+        
+        loggedObject.cadeiras = cadeiras
+
+        let indexUser = cadeiras[0].indexOf(loggedObject)
+        users.splice(indexUser, 1)
+        users.push(loggedObject)
+        localStorage.setItem('users', JSON.stringify(users));
         constCadeira(cadeiras[0],cadeiras[1]);
     }else{
         alert("(PREENCHER TODOS OS ESPAÇOS É OBRIGATÓRIO!)Está a inserir incorretamente os dados!\nEles deveriam ser da seguinte forma\n\nAno: Numero\nSemestre: Numero\nNome: Letras(com numeros se necessário)\nECTS: Numero\nNota: Numero")
     }
     maisForm.reset();
+
+
+}
+function removerItem(removeNome){
+
+    cadeiras[0].forEach( function myFunction(elem){
+        if(elem.Nome == removeNome){
+            let index = cadeiras[0].indexOf(elem)
+            cadeiras[0].splice(index, 1); 
+        }
+        
+    });
+
+
+
+    cadeiras[1][0].Media = getMedia(cadeiras[0])
+
+    
+    loggedObject.cadeiras = cadeiras
+
+    let indexUser = cadeiras[0].indexOf(loggedObject)
+    users.splice(indexUser, 1)
+    users.push(loggedObject)
+    localStorage.setItem('users', JSON.stringify(users));
+    constCadeira(cadeiras[0],cadeiras[1]);
+
 
 
 }
@@ -243,20 +202,18 @@ function getMedia(cadeiras){
     for(let elem in cadeiras){
         sumNotaECTs += (cadeiras[elem].ECTS * cadeiras[elem].Nota);
         sumECTS += cadeiras[elem].ECTS;
-        console.log(cadeiras[elem].ECTS)
     }
-    console.log(sumECTS,sumNotaECTs)
     return (sumNotaECTs/sumECTS).toFixed(2)
 }
 
 function generatebeg() {
-    let select = document.querySelector('select');
 
-    select.addEventListener('change', function () {
-        var selecionada = this.options[this.selectedIndex];
-        console.log(selecionada.value);
-        selectIfUsed(selecionada.value);
-    });
+    let divOperations = document.getElementById("operations")
+    divOperations.style = "display: inline;"
+    cadeiras = loggedObject.cadeiras
+    let salvar = document.getElementById("part2-salvar")
+    salvar.style = "display: grid;"
+    constCadeira(cadeiras[0], cadeiras[1])
 }
 
 generatebeg();
