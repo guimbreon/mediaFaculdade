@@ -16,20 +16,24 @@ O site permite calcular a média de avaliações individuais ou a média do curs
 
 ### Registo e Login
 - **Página de Registo e Login:** Permite aos utilizadores criar uma conta e iniciar sessão.
-    - **Registo:** Os utilizadores podem criar uma conta fornecendo um nome de utilizador e senha.
-    - **Login:** Os utilizadores podem iniciar sessão utilizando o nome de utilizador e senha.
+    - **Registo:** Os utilizadores podem criar uma conta fornecendo um nome de utilizador e senha.(v1)
+    - **Login:** Os utilizadores podem iniciar sessão utilizando o nome de utilizador e senha.(v1)
 
 ### Calculadora de Notas Individual
-- **Input de Avaliações:** Os utilizadores podem inserir a quantidade de partes de avaliação.
-- **Campos Dinâmicos:** Geração dinâmica de campos para inserção de valores e percentagens das avaliações.
-- **Cálculo da Nota Final:** Cálculo da nota final com base nos valores e percentagens inseridos.
+- **Input de Avaliações:** Os utilizadores podem inserir a quantidade de partes de avaliação.(v1)
+- **Campos Dinâmicos:** Geração dinâmica de campos para inserção de valores e percentagens das avaliações.(v1)
+- **Cálculo da Nota Final:** Cálculo da nota final com base nos valores e percentagens inseridos.(v1)
 
 ### Calculadora de Média Geral
-- **Importação de Ficheiros:** Permite a importação de ficheiros Excel contendo dados das cadeiras e respetivas notas.
-- **Input Manual:** Permite a inserção manual de cadeiras, ano, semestre, ECTS e nota.
-- **Cálculo da Média:** Cálculo da média ponderada das cadeiras com base nos ECTS.
-- **Exportação de Resultados:** Possibilidade de exportar os resultados para um ficheiro Excel.
+(v1)
+- **Importação de Ficheiros:** Permite a importação de ficheiros Excel contendo dados das cadeiras e respetivas notas.(v1)
+- **Input Manual:** Permite a inserção manual de cadeiras, ano, semestre, ECTS e nota.(v1)
+- **Cálculo da Média:** Cálculo da média ponderada das cadeiras com base nos ECTS.(v1)
+- **Exportação de Resultados:** Possibilidade de exportar os resultados para um ficheiro Excel.(v1)
 
+(v2)
+- **Dados de cadeiras:** agora ao abrir um conta no site, automaticamente serão guardadas as cadeiras;
+- **Remover Cadeiras:** é possivel remover cadeiras indesejadas, clicando no X.
 ## Estrutura dos Ficheiros
 
 ### HTML
