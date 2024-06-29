@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../styles/Imports/aboutmeImport.css">
+</head>
+<body>
+    <header id="header">
+
+    </header>
+    <div id="top"></div>
+
+    <div id = "content">
+        <div id = "inicio">
+            <h1>College GPA</h1>
+            <p>While I was in college, several colleagues and friends asked me how to calculate the averages for courses and the overall GPA. I usually teach them how to do it, but over time, with many courses taken, it becomes difficult to keep track of everything.</p>
+            <p>So I decided to create this project to help ANYONE in college easily calculate their GPA!</p>
+        </div>
+        
+        <div>
+            <h2>Project Description</h2>
+            <p>The site allows you to calculate the average of individual assessments or the overall course GPA.</p>
+        </div>
+
+        <div>
+            <h2>Site Features</h2>
+            <h3>Registration and Login</h3>
+            <ul>
+                <li><strong>Registration and Login Page:</strong> Allows users to create an account and log in.
+                    <ul>
+                        <li><strong>Registration:</strong> Users can create an account by providing a username and password.</li>
+                        <li><strong>Login:</strong> Users can log in using their username and password.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Individual Grade Calculator</h3>
+            <ul>
+                <li><strong>Input of Assessments:</strong> Users can enter the number of assessment parts.</li>
+                <li><strong>Dynamic Fields:</strong> Dynamic generation of fields for entering assessment values and percentages.</li>
+                <li><strong>Final Grade Calculation:</strong> Calculation of the final grade based on the values and percentages entered.</li>
+            </ul>
+            <h3>Overall GPA Calculator</h3>
+            <ul>
+                <li><strong>File Import:</strong> Allows the import of Excel files containing course data and respective grades.</li>
+                <li><strong>Manual Input:</strong> Allows manual entry of courses, year, semester, ECTS, and grade.</li>
+                <li><strong>GPA Calculation:</strong> Calculation of the weighted average of courses based on ECTS.</li>
+                <li><strong>Export of Results:</strong> Ability to export results to an Excel file.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>File Structure</h2>
+            <h3>HTML</h3>
+            <ul>
+                <li><strong>index.html:</strong> Home page of the site.</li>
+                <li><strong>logReg.html:</strong> Registration and login page.</li>
+                <li><strong>calcIndiv.html:</strong> Page to calculate individual grades.</li>
+                <li><strong>calcTodo.html:</strong> Page to calculate overall GPA.</li>
+            </ul>
+            <h3>JavaScript</h3>
+            <ul>
+                <li><strong>index.js:</strong> Functions to check login on the home page.</li>
+                <li><strong>logReg.js:</strong> Functions for user registration and login.</li>
+                <li><strong>logged.js:</strong> Functions to check and manage user login status.</li>
+                <li><strong>calcIndiv.js:</strong> Functions to calculate individual grades.</li>
+                <li><strong>calcTodo.js:</strong> Functions to calculate the overall GPA of multiple courses.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Instructions for Use</h2>
+            <ol>
+                <li><strong>Access the Site:</strong> Open the <code>index.html</code> file in your browser or go <a href="https://www.guimbreon.online/mediaFaculdade">HERE</a>.</li>
+                <li><strong>Register or Log In:</strong> On first use, you need to create an account on the registration and login page (<code>logReg.html</code>).</li>
+                <li><strong>Calculate Individual Grades:</strong> After logging in, go to the individual grade calculation page (<code>calcIndiv.html</code>) and follow the instructions to enter assessment values.</li>
+                <li><strong>Calculate Overall GPA:</strong> Go to the overall GPA calculation page (<code>calcTodo.html</code>) and choose between importing an Excel file with course data or manually entering course details.</li>
+                <li><strong>Save Results:</strong> Use the export option to save results in Excel format.</li>
+            </ol>
+        </div>
+
+        <div>
+            <h2>Author</h2>
+            <p>This project was developed by <a href="https://www.linkedin.com/in/guilhermesoares26/">Guilherme Soares</a>. For more information about the project, visit the "About the Project" page available in the footer of all pages.</p>
+        </div>
+
+        <div>
+            <h2>Final Notes</h2>
+            <ul>
+                <li><strong>Data Privacy:</strong> All information entered by users is stored locally in the browser, ensuring data privacy.</li>
+                <li><strong>Compatibility:</strong> The site is compatible with major browsers and should be used on the same device and browser to keep data consistent.</li>
+            </ul>
+            <p>If you have any questions or suggestions, do not hesitate to contact the author via LinkedIn.</p>
+        </div>
+    </div>
+    <div id="down"></div>
+
+    <footer>
+        <div id="footerEsq">
+            <p><a href="../footer/aboutme.html">About the project</a></p>
+            <p>&copy; 2024 School Grades.</p>
+        </div>
+        <div id="footerDir">
+            <p>Made by <a href="https://www.linkedin.com/in/guilhermesoares26/">Guilherme Soares</a></p>
+            <p>Lisbon, Portugal</p>
+        </div>
+    </footer>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/logged.js"></script>
+</body>
+</html>

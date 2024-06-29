@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="utf-8">
+    <title>LogReg</title>
+    <link rel="stylesheet" href="../styles/Imports/logRegStyle.css">
+</head>
+
+<body onload="principal()">
+    <header>
+        <nav>
+          <ul>
+            <li><a href="../index.html"><img src= ../images/home.png></a></li>
+          </ul>
+        </nav>
+    </header>
+    <div id="top"></div>
+      <div class="registo">
+          <h2>Registo:</h2>
+          <form id="frmReg">
+            <fieldset>
+            
+              <label for="regUsername">Username</label>
+              <input id="regUsername" type="text" 
+                      name="username" required
+                      maxlength="12" size="20">
+
+              <label for="regSenha">Password</label>
+              <input id="regSenha" type="password" 
+                    name="senha" required
+                    maxlength="18" size="20">
+            </fieldset>
+          </form>
+          <p></p>
+
+      
+          <button type="button" onclick="criaUser()">Register</button>
+      
+      </div>
+
+      <div class="login">
+        <h2>Login:</h2>
+        
+        <form id="frmLogin">
+          <fieldset >
+          
+            <label for="loginUsername">Username</label>
+            <input id="loginUsername" type="text" 
+                    name="username" required
+                    maxlength="12" size="20">
+
+            <label for="loginSenha">Password</label>
+            <input id="loginSenha" type="password" 
+                  name="senha" required
+                  maxlength="18" size="20">
+
+                </fieldset>
+        </form>
+          <p></p>
+
+          <button type="button" onclick="fazerLogin()">Login</button>
+      </div>
+    
+      <div id="down"></div>
+      <footer>
+        <div id="footerEsq">
+          <p><a href = "../footer/aboutme.html">About the project</a></p>
+          <p>&copy; 2024 University Grades.</p>
+        </div>
+        <div id="footerDir">
+          <p>Developed by <a href="https://www.linkedin.com/in/guilhermesoares26/">Guilherme Soares</a></p>      
+          <p>Lisbon, Portugal</p>      
+        </div>
+      </footer>
+  <script src="../scripts/logReg.js"></script>
+  <script src="../scripts/logged.js"></script>
+</body>
+</html>

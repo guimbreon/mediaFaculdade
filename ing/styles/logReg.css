@@ -1,0 +1,50 @@
+
+#top{
+  margin: 13px;
+}
+.login{
+  background-color: #f4ae45;
+  padding: 13px;
+}
+.registo{
+  background-color: #925a29;
+  border-bottom: 8px dashed #f4ae45;
+  padding: 13px;
+}
+.options{
+  display: flex;
+
+}
+
+td {
+  text-align: left;
+  padding-right: 2em; /* Espaçamento entre as células */
+}
+.spacer {
+  width: 20%; /* Largura da célula de espaço */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input, form select {
+  margin-bottom: 10px;
+  width: 80%;
+  max-width: 300px;
+}

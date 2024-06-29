@@ -1,0 +1,146 @@
+/* GENERAL */
+body {
+  margin: 0;
+  background-color:#f4ae45;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+#content{
+  padding-left: 17px ;
+  padding-right: 17px ;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 100% 0%;
+  background-color: #5c230f;
+  text-align: center;
+  padding: 13px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Garante que o header fique por cima de tudo */
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-weight: bold;
+}
+
+header img {
+  width: 20px;
+}
+
+header img:hover {
+  cursor: pointer;
+}
+
+header nav {
+  grid-column: 1;
+}
+
+
+#sair {
+  display: none;
+  grid-column: 2;
+  position: relative; /* Adicionado para posicionamento relativo */
+}
+
+#sair img:hover + #hover,
+#sair:hover #hover {
+  display: block;
+}
+
+#hover {
+  display: none;
+  position: absolute; /* Adicionado para garantir que o menu fique posicionado corretamente */
+  top: 100%; /* Ajusta a posição para que o menu apareça logo abaixo do elemento pai */
+  right: 0; /* Alinha o menu à direita */
+  background-color: #5c230f; /* Cor de fundo para o menu */
+  border: 12px solid #5c230f; /* Borda para o menu */
+  z-index: 1000; /* Garante que o menu apareça acima de outros elementos */
+}
+
+#hover ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#subHover{
+  background-color: #925a29;
+  margin-top: 5px;
+  padding: 0px 69px 0px 69px;
+
+} 
+
+#hover a {
+  text-decoration: none;
+  color: antiquewhite; /* Cor do texto do menu */
+  font-weight: bold;
+}
+
+
+footer p, header a, footer a {
+  color: black; /*MUDAR AQUI A COR*/;
+  text-decoration: none;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  background-color: #5c230f;
+  padding: 10px 0;
+}
+
+#footerEsq {
+  grid-column: 1;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+#footerDir {
+  grid-column: 2;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+main {
+  flex-grow: 1;
+  margin-top: 70px; /* To avoid overlap with the fixed header */
+}
+
+#down {
+  flex-grow: 1;
+  min-height: calc(10vh - 15px);
+  padding-bottom: 15px;
+}
+
+#top {
+  margin-top: 50px;
+}
+
+/* BOTÃO DE SAIR */
+#sair {
+  background-image: url("/images/exit.png");
+}

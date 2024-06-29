@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas</title>
+    <title>Notes</title>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     <link rel="stylesheet" href="../styles/Imports/calcTodoImport.css">
@@ -13,36 +13,36 @@
   <div id="top"></div>
   <div id="content">
       <div id="bemVindo">
-          <h1>Não sabes como calcular a tua média?</h1>
-          <p>Estás no local certo, nós ajudamos!</p>
-          <p>Não te esqueças que o que fazes neste site fica guardado no teu browser! Ou seja:</p>
+          <h1>Don't know how to calculate your GPA?</h1>
+          <p>You are in the right place, we can help!</p>
+          <p>Don't forget that what you do on this site is saved in your browser! That means:</p>
           <ol>
-              <li>Será apenas visto por ti;</li>
-              <li>Apenas podes ver em 1 dispositivo, e no mesmo browser.</li>
+              <li>It will only be seen by you;</li>
+              <li>You can only see it on one device, and in the same browser.</li>
           </ol>
       </div>
       <div id="part1"></div>
       <div id="operations">
         <div id="mais">
-          <h3>Qual a cadeira que desejas adicionar?</h3>
+          <h3>Which course do you want to add?</h3>
           <form id="frmMaisAvals">
               <fieldset>
-                <label for="maisNome">Nome: </label>  
+                <label for="maisNome">Name: </label>  
                 <input id="maisNome" type="text" name="maisNome" required maxlength="40">
                   
-                <label for="maisAno">Ano: </label>  
+                <label for="maisAno">Year: </label>  
                 <input id="maisAno" type="text" name="maisAno" required maxlength="1">
                   
-                <label for="maisSem">Semestre: </label>  
+                <label for="maisSem">Semester: </label>  
                 <input id="maisSem" type="text" name="maisSem" required maxlength="1">
                   
                 <label for="maisECTS">ECTS: </label>  
                 <input id="maisECTS" type="text" name="maisECTS" required maxlength="2">
                   
-                <label for="maisNota">Nota: </label>  
+                <label for="maisNota">Grade: </label>  
                 <input id="maisNota" type="text" name="maisNota" required maxlength="2">
 
-                <button type="button" onclick="readMaisAvals()">Entregar</button>
+                <button type="button" onclick="readMaisAvals()">Submit</button>
               </fieldset>
           </form>
         </div>
@@ -51,19 +51,19 @@
       <div id="media"></div>
       <div id="part2"></div>
       <div id="part2-salvar">
-        <button onclick = "saveButton()">Salvar em Excel!</button>
+        <button onclick = "saveButton()">Save to Excel!</button>
       </div>
       
     </div>
     <div id="down"></div>
     <footer>
         <div id="footerEsq">
-          <p><a href = "../footer/aboutme.html">Sobre o projeto</a></p>
-          <p>&copy; 2024 Notas da escola.</p>
+          <p><a href = "../footer/aboutme.html">About the project</a></p>
+          <p>&copy; 2024 School Notes.</p>
         </div>
         <div id="footerDir">
-          <p>Feito por <a href="https://www.linkedin.com/in/guilhermesoares26/">Guilherme Soares</a></p>      
-          <p>Lisboa, Portugal</p>      
+          <p>Made by <a href="https://www.linkedin.com/in/guilhermesoares26/">Guilherme Soares</a></p>      
+          <p>Lisbon, Portugal</p>      
         </div>
       </footer>
     <script src="../scripts/calcTodo.js"></script>

@@ -1,0 +1,53 @@
+#bemVindo{
+  padding-top: 0px;
+}
+#bemVindo h1{
+  text-align: center;
+}
+
+
+/*PARTE 1*/
+#part1{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 7px;
+  place-items: center;
+  text-align: center;
+}
+#inicio{
+  padding: 13px;
+}
+
+
+/*finalGrade*/
+#finalGrade{
+  text-align: center;
+}
+
+
+/*form*/
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input, form select {
+  margin-bottom: 10px;
+  width: 80%;
+  max-width: 300px;
+}
